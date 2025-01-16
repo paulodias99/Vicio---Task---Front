@@ -17,7 +17,7 @@ const EnrollmentList: React.FC<EnrollmentListProps> = ({ userId }) => {
   );
 
   if (isLoading) return <div>Carregando...</div>;
-  if (error) return <div>Erro ao carregar os cursos.</div>;
+  if (error) return <div>Erro ao carregar as matrículas do usuário.</div>;
 
   return (
     <div>

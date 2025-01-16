@@ -7,8 +7,8 @@ const CourseList: React.FC = () => {
 
   const { data, isLoading, error } = useQuery(['courses', timezoneOffset], () => fetchCourses(timezoneOffset));
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading courses.</div>;
+  if (isLoading) return <div>Carregando...</div>;
+  if (error) return <div>Erro ao carregar os cursos.</div>;
 
   return (
     <div>
