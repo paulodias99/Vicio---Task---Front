@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+# Task Prática - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o frontend da aplicação da **Task Prática** da **Vício**. Ele foi desenvolvido para consumir a API criada no backend, permitindo a gestão de usuários, cursos e matrículas.
 
-Currently, two official plugins are available:
+**Repositório do Backend**: [Task Prática - Backend](https://github.com/paulodias99/Vicio---Task)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖼️ Interface
+![Preview da Aplicação](./images/imgfront.png)
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
+- **React** → Biblioteca para construção da interface.
+- **Axios** → Cliente HTTP para comunicação com o backend.
+- **Vite** → Ferramenta de build moderna para aplicações front-end.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### **Por que Vite?**
+O **Vite** é extremamente rápido e eficiente no desenvolvimento de aplicações **React**.
 
-- Configure the top-level `parserOptions` property like this:
+## Como rodar o projeto?
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/paulodias99/Vicio---Task---Front.git
+   cd Vicio---Task---Front
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+4. Acesse a aplicação:
+   - **Frontend**: `http://localhost:5173`
+   - **Backend**: Certifique-se de que o backend está rodando em `http://localhost:3000`
+
+## Observações
+- O frontend consome os dados da API, então o **backend precisa estar rodando** para a aplicação funcionar corretamente.
+- Para configurar o **backend**, siga as instruções no repositório [Task Prática - Backend](https://github.com/paulodias99/Vicio---Task).
